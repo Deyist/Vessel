@@ -1,0 +1,187 @@
+<html>
+        <head>
+            <title>
+                The Newest Vessel
+            </title>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        </head>
+        
+        <body id ="back" id ="bod">
+            <div id="one"><img src ="images/top.png">
+                
+                <div id="two"><img src = "images/river.png">
+                    <h1 id = "apptext">Cargo:</h1>
+                <h1 id="counter" >0</h1> 
+
+                <h1 id = "apptext2">Total Clicks:</h1>
+                <h1 id="counter2" >0</h1> 
+
+
+
+
+                </div>
+               
+
+
+
+
+
+
+
+                </div>
+       <button id = "cplast" ><img src="images/ship.png" id = "mainplast"></button>   
+       <button id = "cplast2" ><img src="images/box.png" id = "plastbut"></button>      
+       <div id="forApp">  </div>
+<link rel="stylesheet" href="styles.css">
+<img src="images/sun.gif" id = "shiney">
+<iframe src="silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+
+            </div>
+            <div id="three">  
+                <div id ="four">
+                    <audio id="myAudio" autoplay loop controls>
+    <source src="audio/Strings.mp3" type="audio/mp3">
+                    </audio>
+    <audio id="myAudio2" autoplay loop controls>
+    <source src="audio/Complexity.mp3" type="audio/mp3">
+</audio>
+                  <h1 id="headSet">Settings</h1>
+                  <h1 id="headMus">Music - Can change volume and it loops. <br> (Song 1 - Strings; Song 2 - Complexity)</h1>
+                  <p id = "lessp">This button allows you to go back one question if you would like to try it again for review purposes.(Spamming it endlessly will bring you back to question one, it does not loop to the end)</p><button id = "less">Go back one question</button>
+                  <p id = "on">This button will turn questions on for you, or if you have them on it will reset your questions. (Resets your total clicks)</p><button id ="on2">Turn questions on or Reset</button>
+                  <p id = "off">This button will turn questions off for you (Turns off your total clicks)</p><button id ="off2">Turn questions off</button>
+                  
+                  <button id="x" onclick="document.getElementById('four').style.display = 'none'; document.getElementById('settings').style.display = 'block';"><input type="image"
+                    id="x_1" src="images/xwithoutBG.png"></button>
+                </div>
+                <div id ="five">
+                    <h1 id="headSet2">Help</h1>
+                    <h1 id="headMus2">Instructions: Click the steam vessel in order to get cargo boxes. Cargo boxes can be used to purchase either different items of trade or allow you to fund more workers. These split parts of the game fall into two distinct categories, idle clicks, and per clicks. The lower you go in the shop, the more expensive it will be, but the more cargo it will provide for you. Idle clicks click for you and give you cargo without you having to do a thing. On the other hand, per clicks give you more cargo every time you click the steam vessel. Your default clicks are 1 cargo per click. You start with no idle clicks as well. The total clicks counter is used to show you when your questions are approaching. The first question starts at 50 clicks. Each question comes after the previous with another 50 clicks to get your question. The 2nd at 100 clicks, 3rd at 150, 4th at 200, and so on until you hit the 32nd question. This question when answered will allow you to win the first part of the game. From this point on you can either choose to continue on to beat the game where you need to get atleast 100 of everything to be considered a winner, or leave because you only came to study. In it's current version of v2.2 the game is meant to be easy with only around 1500 clicks being what you need to win the game. This is strictly to take up less time and for review purposes. Thank you for playing. (Settings has original music if that's what you fancy, p.s only "materials" you need for this game are a functioning computer and the zip file at github.com/deyist.</h1>
+                    <button id="x2" onclick="document.getElementById('five').style.display = 'none'; document.getElementById('help').style.display = 'block';"><input type="image"
+                      id="x_2" src="images/xwithoutBG.png"></button>
+                </div>
+                    <b><h1 id ="appShop">Cargo Shop</h1></b>  
+                    <h1 id="idle">Idle Clicks</h1>  
+
+
+                    <h2 id="Wheat">Wheat:</h2>
+                    <h2 id="WheatCounter">0</h2>
+                    <button id="addWheat1" onclick = "Wheat()">+1</button>
+
+
+                    <h2 id="Barley">Barley:</h2>
+                    <h2 id="BarleyCounter">0</h2>
+                    <button id="addBarley1" onclick = "Barley()">+1</button>
+
+
+                    <h2 id="Indigo">Indigo:</h2>
+                    <h2 id="IndigoCounter">0</h2>
+                    <button id="addIndigo1" onclick = "Indigo()">+1</button>
+
+
+                    <h2 id="Oats">Oats:</h2>
+                    <h2 id="OatsCounter">0</h2>
+                    <button id="addOats1" onclick = "Oats()">+1</button>
+
+
+                    <h2 id="Corn">Corn:</h2>
+                    <h2 id="CornCounter">0</h2>
+                    <button id="addCorn1" onclick = "Corn()">+1</button>
+
+
+                    <h2 id="Tobacco">Tobacco:</h2>
+                    <h2 id="TobaccoCounter">0</h2>
+                    <button id="addTobacco1" onclick = "Tobacco()">+1</button>
+
+
+                    <h2 id="Rice">Rice:</h2>
+                    <h2 id="RiceCounter">0</h2>
+                    <button id="addRice1" onclick = "Rice()">+1</button>
+
+
+                    <h2 id="Cotton">Cotton:</h2>
+                    <h2 id="CottonCounter">0</h2>
+                    <button id="addCotton1" onclick = "Cotton()">+1</button>
+
+
+
+
+
+                    <h1 id="clicks">Per Click</h1>  
+
+
+                    <h2 id="Weak">Weak Kid:</h2>
+                    <h2 id="Weakcounter">0</h2>
+                    <button id="addWeak1" onclick = "Weakf()">+1</button>
+
+
+                    <h2 id="Strong">Strong Kid:</h2>
+                    <h2 id="StrongCounter">0</h2>
+                    <button id="addStrong1" onclick = "Strong()">+1</button>
+
+
+
+                    <h2 id="Teen"> Teen:</h2>
+                    <h2 id="TeenCounter">0</h2>
+                    <button id="addTeen1" onclick = "Teenfunc()">+1</button>
+
+
+
+
+                    <h2 id="Adult">Adult:</h2>
+                    <h2 id="AdultCounter">0</h2>
+                    <button id="addAdult1" onclick = "Adultfunc()">+1</button>
+
+
+
+                    <h2 id="Buff">Buff man:</h2>
+                    <h2 id="BuffCounter">0</h2>
+                    <button id="addBuff1" onclick = "Bufffunc()">+1</button>
+
+
+
+                    <button id="settings" onclick="document.getElementById('four').style.display = 'block'; document.getElementById('settings').style.display = 'none';">Settings</button>
+                    <button id="help" onclick="document.getElementById('five').style.display = 'block'; document.getElementById('help').style.display = 'none';">Help</button>
+
+
+
+
+
+
+                </div>  
+
+            <!--  New stuff -->
+                <div id = "six">
+                    <h1 id="headMus3"> </h1>
+                    <h1 id="headSet3"></br>This is where questions will show up for you! (Click X to exit) Click Help if you are stuck. Getting a question incorrect will result in a loss of 1/3 of your cargo. Start by clicking the steam vessel, and then go upgrade!!! Enjoy the game and thankyou for playing!</br></br> Note: No humans are being sold in this game or bought, they are being paid consentual wages in exchange for their labor that ultimately results in you receiving more cargo.</br></br>	&#169;A.P.M</h1>
+                    <!--<button type = "button" id = "order">Ordered Mode</button><p id = "porder">(Puts questions in order 1-30 and then stops)</p>
+                    <button type = "button" id = "random">Randomizer</button><p id = "prandom">(Randomizes questions but has endless questions)(May get repeats)</p>-->
+                    <form id = 'fourm'>
+                        <input type="radio" id="q1" name="multiple-choice" value="Correct">
+                        <label for="q1" id = 'w1' class='ws'><p id = 'p1' class = ps> </p></label><br><br><br>
+                        <span class ="checkmark"></span>
+                        <input type="radio" id="q2" name="multiple-choice" value="Incorrect">
+                        <label for="q2"id = 'w2' class='ws'><p id = 'p2' class = ps> </p></label><br><br><br>
+                        <span class ="checkmark"></span>
+                        <input type="radio" id="q3" name="multiple-choice" value="Incorrect">
+                        <label for="q3"id = 'w3' class='ws'><p id = 'p3' class= ps> </p></label><br><br><br>
+                        <span class ="checkmark"></span>
+                        <!--<input type="radio" id="q4" name="multiple-choice" value="Incorrect"></input>
+                        <label for="q4"id = 'w4' class='ws'><p id = 'p4' class = ps> </p></label><br>-->
+
+
+                        <button type="button" id="sub">Submit</button>
+                        <p id ="correct">Correct!</p>
+                        <p id ="incorrect">Incorrect!</p>
+
+                        
+
+                      </form> 
+                    <button id="x3" onclick="document.getElementById('six').style.display = 'none'"><input type="image"
+                      id="x_3" src="images/xwithoutBG.png"></button>
+               </div>       
+                      
+                <script src="script.js"></script>
+        </body>
+</html>
